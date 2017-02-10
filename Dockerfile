@@ -1,4 +1,4 @@
-FROM		logstash:5
+FROM		logstash:5.1.1
 MAINTAINER	phirov@163.com
 
 RUN		mkdir -p /opt/logstash/ && \
