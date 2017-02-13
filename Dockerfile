@@ -12,8 +12,9 @@ RUN		mkdir -p /opt/logstash/ && \
 		cd /usr/share/logstash && \
 		sed -i 's/gem "logstash-input-s3"/gem "logstash-input-s3", :path => "\/opt\/logstash\/logstash-input-s3-3.1.2"/g' Gemfile && \
 		gem build /opt/logstash/logstash-input-s3-3.1.2/logstash-input-s3.gemspec && \
-		./bin/logstash-plugin install --no-verify
+		./bin/logstash-plugin install --no-verify && \
 		#./bin/logstash-plugin update --no-verify
+		./bin/logstash-plugin install logstash-output-mongodb
 
 ENTRYPOINT	["/docker-entrypoint.sh"]
 CMD		["-e", ""]
