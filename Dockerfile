@@ -14,7 +14,8 @@ RUN		mkdir -p /opt/logstash/ && \
 		gem build /opt/logstash/logstash-input-s3-3.1.2/logstash-input-s3.gemspec && \
 		./bin/logstash-plugin install --no-verify && \
 		#./bin/logstash-plugin update --no-verify
-		./bin/logstash-plugin install logstash-output-mongodb
+		./bin/logstash-plugin install logstash-output-mongodb && \
+		./bin/logstash-plugin install logstash-filter-environment
 
 ENTRYPOINT	["/docker-entrypoint.sh"]
 CMD		["-e", ""]
