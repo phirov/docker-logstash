@@ -1,7 +1,7 @@
 #!/bin/sh
 
 IMAGE_NAME='phirov/docker-logstash'
-: ${IMAGE_VERSION:='5-patch'}
+: ${IMAGE_VERSION:='5-p6'}
 
 echo "
     docker rmi ${IMAGE_NAME} ${IMAGE_NAME}:${IMAGE_VERSION}
