@@ -4,8 +4,10 @@ MAINTAINER	phirov@163.com
 RUN		echo "alias ls='ls --color=auto'" >> $HOME/.bashrc && \
 		#
 		# install crontab, but the cron service should be started manually
+		# install supervisor
 		apt-get update && \
-                apt-get install -y cron && \
+		apt-get install -y cron supervisor && \
+		mkdir -p /var/log/supervisor && \
 		#
 		# install additional offical plugins but not installed in standard release
 		#echo 'gem "logstash-output-mongodb"' >> /usr/share/logstash/Gemfile && \
