@@ -31,7 +31,7 @@ RUN		echo "alias ls='ls --color=auto'" >> $HOME/.bashrc && \
 		wget -O src/logstash-filter-environment-3.0.0-p1.tar.gz https://github.com/phirov/logstash-filter-environment/archive/v3.0.0-p1.tar.gz && \
 		tar xzf src/logstash-filter-environment-3.0.0-p1.tar.gz && \
 		cd /usr/share/logstash && \
-		echo 'gem "logstash-filter-environment", :path => "\/opt\/logstash\/logstash-filter-environment-3.0.0-p1"' >> Gemfile && \
+		echo 'gem "logstash-filter-environment", :path => "/opt/logstash/logstash-filter-environment-3.0.0-p1"' >> Gemfile && \
 		#sed -i 's/gem "logstash-filter-environment"/gem "logstash-filter-environment", :path => "\/opt\/logstash\/logstash-filter-environment-3.0.0-p1"/g' Gemfile && \
 		gem build /opt/logstash/logstash-filter-environment-3.0.0-p1/logstash-filter-environment.gemspec && \
 		#
