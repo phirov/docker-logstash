@@ -13,6 +13,10 @@ This image is publish to [here](https://hub.docker.com/r/phirov/docker-logstash/
 
 # History
 
+## v5-m9
+
+安装 python-pip 包
+
 ## v5-m8
 
 安装 supervisor 服务
